@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+}
+
+#content {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+}
+
+.header {
+    border-bottom: 2px solid black;
+    grid-area: 1 / 2 / span 2 / span 3;
+    margin: 20px;
+    height: 15vh;
+}
+
+.header-text {
+    font-size: 4rem;
+    padding: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+.sidebar {
+    border-right: 2px solid black;
+    grid-area: 2 / 1 / span 6 / 2;
+}
+
+.projects {
+    font-size: 2rem;
+    padding: 20px;
+}
+
+.add-project-btn {
+    margin: 10px;
+    padding: 2px 5px;
+    background-color: pink;
+    border-radius: 50%;
+    border: 1px solid black;
+    
+}
+
+.main {
+    grid-area: 3 / 2 / span 10 / span 3;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.add-todo-btn {
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid black;
+    cursor: pointer;
+    width: 125px;
+}
+
+.add-item {
+    padding: 5px;
+    margin: 5px;
+
+    border-bottom: 2px solid teal;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px
+}
+
+.add-btn-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.rmv-btn {
+    border: 1px solid red;
+    color: red;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 10px;
+    padding: 2px 5px;
+}
