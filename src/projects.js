@@ -1,10 +1,12 @@
 import { myProjects } from "./addproject"
 import { clearToDoField } from "./todo"
 
+
 export function accessProjects() {
-    for (const keys in myProjects) {
-        console.log(`${keys}: ${myProject[keys]}`)
-    }
+ myProjects.forEach(i => {
+    document.getElementById(myProjects[i]['title']).addEventListener('click', () => 
+    console.log(myProjects[i]['list']))
+ })
 }
 
 

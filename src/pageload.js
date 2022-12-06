@@ -1,6 +1,7 @@
 import { addProject } from "./addproject";
 import { addItemClick } from "./todo";
 
+
 export function pageload() {
     const content = document.querySelector('#content');
 
