@@ -2,13 +2,14 @@ import { todoList } from "./todolist";
 import { accessProjects } from "./projects";
 
 export const myProjects = [];
-    let newProject;
+let newProject;
 
-function Project(title, list) {
+class Project {
+    constructor(title, list){
         this.title = title
         this.list = list
         }
-
+    }
 
 export function addProjectInput() {
 
