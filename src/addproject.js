@@ -2,9 +2,9 @@ import { todoList } from "./todolist";
 import { accessProjects } from "./projects";
 
 export const myProjects = [];
-let newProject;
+export let newProject;
 
-class Project {
+export class Project {
     constructor(title, list){
         this.title = title
         this.list = list
@@ -15,6 +15,7 @@ export function addProjectInput() {
 
     const projects = document.querySelector('.projects')
     const addNewProject = document.createElement('input')
+
     addNewProject.classList.add('add-new-project')
     addNewProject.type = 'text'
     projects.append(addNewProject)

@@ -1,5 +1,9 @@
 import { addProject } from "./addproject";
 import { addItemClick } from "./todo";
+import { newProject } from "./addproject";
+import { myProjects } from "./addproject";
+import { Project } from "./addproject";
+import { todoList } from "./todolist";
 
 
 export function pageload() {
@@ -27,6 +31,13 @@ export function pageload() {
     addProjectBtn.classList.add('add-project-btn')
     addProjectBtn.innerText = '+'
     projects.append(addProjectBtn)
+
+    const tasks = document.createElement('div')
+    tasks.setAttribute('id', 'Tasks')
+    tasks.textContent = `Tasks`
+    newProject = new Project('Tasks', todoList)
+    myProjects.push(newProject)
+    projects.append(tasks)
 
     const main = document.createElement('div')
     main.classList.add('main')
